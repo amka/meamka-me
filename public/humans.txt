@@ -1,0 +1,6 @@
+CONGRATULATIONS, you found our humans.txt file!
+
+/* TEAM */
+Developer: Andrey Maksimov
+Contact: andrey [at] tenderowl.com
+Twitter: @meamka
