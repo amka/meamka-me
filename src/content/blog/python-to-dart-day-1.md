@@ -10,8 +10,7 @@ tags:
   - tutorial
   - python
 ogImage: ""
-description:
-  From Python to Dart - quickstart for Python developers. Day 1, getting to know Dart
+description: From Python to Dart - quickstart for Python developers. Day 1, getting to know Dart
 ---
 
 # Day 1, getting to know Dart
@@ -26,13 +25,14 @@ Dart is an object-oriented, class-based language with a garbage collector that i
 
 ## Install Dart
 
-Many OS users do not need any steps to use Python, it comes pre-installed on macOS, most if not all Linux and *BSD based distributions, and only Windows users will need to download and run the installer. Things are different with Dart.
+Many OS users do not need any steps to use Python, it comes pre-installed on macOS, most if not all Linux and \*BSD based distributions, and only Windows users will need to download and run the installer. Things are different with Dart.
 
 The easiest way to try Dart is to use [DartPad](https://dartpad.dev), an editor available online that allows you to write small applications.
 
 To install Dart on a local computer, go to the site [https://dart.dev/get-dart](https://dart.dev/get-dart) and follow one of the paths according to your operating system. So, for macOS users using [Homebrew](https://brew.sh/) just use the command:
-```sh
-brew install dart
+
+```bash
+$ brew install dart
 ```
 
 An alternative option would be to [install](https://docs.flutter.dev/get-started/install/) Flutter, Dart will be installed as a part of it.

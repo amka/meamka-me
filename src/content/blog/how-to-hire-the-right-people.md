@@ -5,24 +5,25 @@ title: How to hire people
 postSlug: how-to-hire-the-right-people
 featured: true
 draft: false
+ogImage: //assets/how-to-hire-the-right-people/how-to-hire-the-right-people.webp
 tags:
   - management
   - people
   - experience
-ogImage: ""
-description:
-  Over the past 6 years my job has mostly been to find the right people for my team and during that time I have developed a set of questions and markers that make it pretty easy for me to tell if the selected candidate is not the right fit. or not. Conventionally, these markers can be divided into several points.
+description: Over the past 6 years my job has mostly been to find the right people for my team and during that time I have developed a set of questions and markers that make it pretty easy for me to tell if the selected candidate is not the right fit. or not. Conventionally, these markers can be divided into several points.
 ---
+
+![Artificial team meeting](/assets/how-to-hire-the-right-people/how-to-hire-the-right-people.webp)
 
 Over the past 6 years, my job has been a lot to find the right people for my team, and in that time I've developed a set of questions and markers that help me quite easily determine whether a candidate is a good fit or not. Conventionally, these markers can be divided into several points:
 
-* **Teamwork**: I don't build solo teams, I assemble effective teams that can get the job done. Each member of the team should be able to communicate and at the same time not go into conflict, disagreements happen to everyone, but they need to be resolved peacefully;
+- **Teamwork**: I don't build solo teams, I assemble effective teams that can get the job done. Each member of the team should be able to communicate and at the same time not go into conflict, disagreements happen to everyone, but they need to be resolved peacefully;
 
-* **The ability to convey your thoughts**: working in a team on one project involves a lot of communication and the ability to explain your ideas, ask the right questions is critical;
+- **The ability to convey your thoughts**: working in a team on one project involves a lot of communication and the ability to explain your ideas, ask the right questions is critical;
 
-* **The ability get things done**: any task is of value only when completed, read “available to users”;
+- **The ability get things done**: any task is of value only when completed, read “available to users”;
 
-* **Involvement, interest**: I do not want to educate everyone, I need people in the team who are interested in what they do, they themselves study the language / framework / database / other related technologies to make their projects the best on the market;
+- **Involvement, interest**: I do not want to educate everyone, I need people in the team who are interested in what they do, they themselves study the language / framework / database / other related technologies to make their projects the best on the market;
 
 ### Teamwork
 
@@ -53,31 +54,32 @@ When recruiting people to a team, we always aim to make this team stronger and m
 How to know about it? Ask about what the candidate has learned during the six months/year; why did he study it? How does he find out about the latest in his field? Ask him what he changed in the work of his previous company, within his job or department?
 
 ### Questions
+
 These are just examples of questions, you can adjust them to suit your team.
 
 #### Teamwork
 
-* What was your role on the team?
-* Have you ever had to explain why a task would take longer?
-* Have you assigned tasks to other people in the company?
+- What was your role on the team?
+- Have you ever had to explain why a task would take longer?
+- Have you assigned tasks to other people in the company?
 
 #### The ability to convey your thoughts
 
-* Were there moments that you did not like? How did you try to solve them?
+- Were there moments that you did not like? How did you try to solve them?
 
 #### Ability to get things done
 
-* Do you have open projects on GitHub/Gitlab? What problems do they solve?
-* What products have you created or would like to create? It can be anything: an application, a book, a blog, music, etc.
+- Do you have open projects on GitHub/Gitlab? What problems do they solve?
+- What products have you created or would like to create? It can be anything: an application, a book, a blog, music, etc.
 
 #### Involvement, interest
 
-* What recent have you studied or read?
-* How do you find out about new technologies?
+- What recent have you studied or read?
+- How do you find out about new technologies?
 
 ### How to use it
 
 Well, you have two options:
 
-* You can evaluate your current employees on these points - I mean those who you hired in the past.
-* If you are actively hiring employees, you can try evaluating them using this technique.
+- You can evaluate your current employees on these points - I mean those who you hired in the past.
+- If you are actively hiring employees, you can try evaluating them using this technique.

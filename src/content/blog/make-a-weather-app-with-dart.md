@@ -11,12 +11,11 @@ tags:
   - weather
   - beginner
 ogImage: ""
-description:
-  How to write a simple command-line application to get current weather by using OpenMeteo API.
+description: How to write a simple command-line application to get current weather by using OpenMeteo API.
 ---
 
+Today we're going to build a console application that can fetch and show weather for the given location. Under the hood, it uses [Open-Meteo](https://open-meteo.com/) as a weather data source. In addition to the Dart language, we will use several libraries to implement the application:
 
-Today we're going to build a console application that can fetch and show weather for the given location. Under the hood, it uses  [Open-Meteo](https://open-meteo.com/) as a weather data source. In addition to the Dart language, we will use several libraries to implement the application:
 - [args](https://pub.dev/packages/args) to parse command-line arguments
 - [http](https://pub.dev/packages/http) to fetch the data via API
 - [console](https://pub.dev/packages/console) to make output of the app more fancy ✨
@@ -33,12 +32,13 @@ Command-line or console applications usually work straightforwardly from start t
 
 For example:
 
-```
-dart compile exe -o myApp bin/myApp.dart
+```bash
+$ dart compile exe -o myApp bin/myApp.dart
 ```
 
 That's a lot, I know, but let's see what is presented here.
 `dart` - is the application itself. Next goes a bunch of arguments:
+
 - `compile`, `exe` - command and subcommand to the `dart` program, it describes the main command to execute.
 - `-o myApp` - argument, which tells what the name of the output file should be.
 - `bin/myApp.dart` - the last argument pointing to the filename to be compiled.
@@ -85,9 +85,10 @@ As you can see, flags are kind of indicators, they can be `true` or `false`. On 
 
 ## Finding the location
 
-When user input is collected and parsed, our application logic comes first. It starts with the need to find the coordinates of a given location because the Open-Meteo API requires coordinates to provide us with a forecast. To do this, we can use reverse geocoding, and for these purposes Open-Meteo offers us the API method https://open-meteo.com/ru/docs/geocoding-api, to which we must pass the name of the place, and in response we will receive a list from suitable locations. Each location contains a lot of geographic information, but we will only be interested in the name and coordinates. 
+When user input is collected and parsed, our application logic comes first. It starts with the need to find the coordinates of a given location because the Open-Meteo API requires coordinates to provide us with a forecast. To do this, we can use reverse geocoding, and for these purposes Open-Meteo offers us the API method https://open-meteo.com/ru/docs/geocoding-api, to which we must pass the name of the place, and in response we will receive a list from suitable locations. Each location contains a lot of geographic information, but we will only be interested in the name and coordinates.
 
 Let's start with an API request. We need a function that takes a location name and returns a list of locations from the API response. Something like this:
+
 ```dart
 Future<List<Location>?> getCoordinates(String locationName,
     {int count = 5}) async {
@@ -95,7 +96,8 @@ Future<List<Location>?> getCoordinates(String locationName,
 }
 ```
 
-In order to make a request we need to build a `Uri` object. 
+In order to make a request we need to build a `Uri` object.
+
 ```dart
   final uri = Uri.https(
     'geocoding-api.open-meteo.com',
@@ -105,6 +107,7 @@ In order to make a request we need to build a `Uri` object.
 ```
 
 Now we can send an HTTP request and process results:
+
 ```dart
  try {
     // Send request and await for response.
@@ -166,7 +169,7 @@ Cool! Now we have a list with `Location`-s and thus we can go to the next part -
 
 ## Current weather condition
 
-Let's start with defining `CurrentWeather` model. As you may see in the Open-Meteo API condition can contain a lot of data such as temperature, precipation, UV-level and more. To make our code compact we will care only about few of them: temperature, weather code and wind speed. 
+Let's start with defining `CurrentWeather` model. As you may see in the Open-Meteo API condition can contain a lot of data such as temperature, precipation, UV-level and more. To make our code compact we will care only about few of them: temperature, weather code and wind speed.
 
 ```dart
 class CurrentWeather {
@@ -188,6 +191,7 @@ class CurrentWeather {
 ```
 
 All that remains for us is to form a request to the server and process the response in the same way as we did in the getCoordinates function:
+
 - create a Uri object
 - using the http library we send a request to the API and wait for a response
 - check that the response contains no errors and try to parse JSON into a CurrentWeather object.

@@ -10,10 +10,8 @@ tags:
   - tutorial
   - python
 ogImage: ""
-description:
-  From Python to Dart - Day 2 - Meet the dart CLI.
+description: From Python to Dart - Day 2 - Meet the dart CLI.
 ---
-
 
 The Dart language is unimaginable without the command-line utility (CLI) of the same name. This is a full-fledged tool that greatly simplifies the life of a developer in terms of its capabilities, far exceeding the built-in capabilities of the Python interpreter.
 
@@ -23,24 +21,24 @@ Among the `dart` features available are project creation, source code analyzing 
 
 ## Projects creation
 
-Python does not have built-in capabilities for automated project creation, everything has to be done manually: create a folder structure, describe dependencies in `requirements.txt`. Of course, there are third-party applications that make this process easier, such as  [poetry](https://python-poetry) or [Cookiecutter](https://cookiecutter.readthedocs.io/). However, they are third-party and require installation in a system or virtual environment. Dart has this feature built-in.
+Python does not have built-in capabilities for automated project creation, everything has to be done manually: create a folder structure, describe dependencies in `requirements.txt`. Of course, there are third-party applications that make this process easier, such as [poetry](https://python-poetry) or [Cookiecutter](https://cookiecutter.readthedocs.io/). However, they are third-party and require installation in a system or virtual environment. Dart has this feature built-in.
 
 ### dart create
 
 So, `dart create` is a CLI utility that can help you to create a project from the specified template.
 
-```
+```bash
 $ dart create project_name
 ```
 
 By default, this is a simple console application like [dart-sass](https://sass-lang.com/dart-sass). However, this is not all. Using the `-t` option, you can specify which template to use for creation, it can be:
 
-| `console-simple` | A simple console application (basic template). |
-| ---------------- | ------------------------------------------------------ |
-| `console-full` | Console application with tests. |
-| `package-simple` | A starting point for Dart libraries or apps. |
-| `server-shelf` | Server based on [shelf](https://pub.dev/packages/shelf). |
-| `web-simple` | Web application with core libraries. |
+| `console-simple` | A simple console application (basic template).           |
+| ---------------- | -------------------------------------------------------- |
+| `console-full`   | Console application with tests.                          |
+| `package-simple` | A starting point for Dart libraries or apps.             |
+| `server-shelf`   | Server based on [shelf](https://pub.dev/packages/shelf). |
+| `web-simple`     | Web application with core libraries.                     |
 
 When run, `dart create` will first create the project structure and then try to load all required libraries from [pub.dev](https://pub.dev). This behavior can be changed by specifying the `--no-pub` flag when invoking the command.
 
@@ -56,11 +54,11 @@ The utility allows you to perform [static analysis](https://dart.dev/guides/lang
 
 By default, the call will run a check and indicate errors and warnings, indicating the need to respond to the `info` level with the `--fatal-infos` flag.
 
-```
+```shell
 $ dart analyze [<DIRECTORY> | <DART_FILE>]
 ```
 
-The behavior of the analyzer can be adjusted using the configuration file or comments in the code. 
+The behavior of the analyzer can be adjusted using the configuration file or comments in the code.
 
 ### dart format
 
@@ -80,10 +78,10 @@ $ dart fix
 
 Applies automatic fixes to source code files, fixing two types of errors:
 
-- Analysis of issues related to automatic fixes (sometimes called *quick-fixes* or *code actions*)
+- Analysis of issues related to automatic fixes (sometimes called _quick-fixes_ or _code actions_)
 - Issues related to package API transfer information
 
-To see the changes, specify the `--dry-run` flag; to apply `--apply`; there is no *default* behavior for this command.
+To see the changes, specify the `--dry-run` flag; to apply `--apply`; there is no _default_ behavior for this command.
 
 ## Building / Compilation
 
@@ -135,13 +133,13 @@ The `dart compile` command allows you to compile a Dart program for the target p
 $ dart compile
 ```
 
-| Subcommand | Conclusion | Description |
-| ------------- | ---------------- | -------|
-| `exe` | Executable | A standalone, architecture-specific executable containing source code compiled to native code and a small Dart runtime. |
-| `aot-snapshot` | AOT module | An architecture-specific file containing source code compiled to native code, but **does not contain** the Dart runtime. |
-| `jit-snapshot` | JIT Module | An architecture-specific file with an intermediate representation of the entire source code, as well as an optimized representation of the source code that was running during the training run of the program. JIT code may have higher peak performance than AOT code, but it depends on the training run. |
-| `kernel` | kernel module | A portable intermediate representation of the source code. [More](https://dart.dev/tools/dart-compile#kernel) |
-| `js` | JavaScript | JavaScript file with application. [More](https://dart.dev/tools/dart-compile#js) |
+| Subcommand     | Conclusion    | Description                                                                                                                                                                                                                                                                                                  |
+| -------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `exe`          | Executable    | A standalone, architecture-specific executable containing source code compiled to native code and a small Dart runtime.                                                                                                                                                                                      |
+| `aot-snapshot` | AOT module    | An architecture-specific file containing source code compiled to native code, but **does not contain** the Dart runtime.                                                                                                                                                                                     |
+| `jit-snapshot` | JIT Module    | An architecture-specific file with an intermediate representation of the entire source code, as well as an optimized representation of the source code that was running during the training run of the program. JIT code may have higher peak performance than AOT code, but it depends on the training run. |
+| `kernel`       | kernel module | A portable intermediate representation of the source code. [More](https://dart.dev/tools/dart-compile#kernel)                                                                                                                                                                                                |
+| `js`           | JavaScript    | JavaScript file with application. [More](https://dart.dev/tools/dart-compile#js)                                                                                                                                                                                                                             |
 
 ### dart test
 
@@ -153,7 +151,7 @@ $ pytest
 
 The output of the command is quite detailed and makes it easy to understand where and what went wrong when running the tests. Here's what it looks like:
 
-![pytest example](/assets/from-python-to-dart-meet-the-dart-cli/pytest.png)
+![pytest example](/assets/from-python-to-dart-meet-the-dart-cli/pytest.webp)
 
 Testing in Dart is done with the `dart test` command.
 
@@ -163,7 +161,7 @@ $ dart test
 
 Several flags such as `--name` (`-n`), `--tags` (`-t`), or `--exclude-tags` (`-x`) allow you to control which tests will be run. If several flags are specified, then tests that satisfy all conditions at once will be executed.
 
-![dart test example](/assets/from-python-to-dart-meet-the-dart-cli/dart-test.png)
+![dart test example](/assets/from-python-to-dart-meet-the-dart-cli/dart-test.webp)
 
 ## Package management
 
@@ -205,7 +203,7 @@ An important part of the development of applications and libraries is the docume
 $ dart doc
 ```
 
-![Sample generated dart doc documentation](/assets/from-python-to-dart-meet-the-dart-cli/dart-doc.png)
+![Sample generated dart doc documentation](/assets/from-python-to-dart-meet-the-dart-cli/dart-doc.webp)
 
 Dart allows you to use comments and markup in your code to describe classes, functions, modules, and other structures. We'll look at these in more detail in a separate article, but for now, we'll mention that Dart handles special document comments. You can read about how to make documentation as effective as possible in the article [Effective Dart](https://dart.dev/guides/language/effective-dart/documentation).
 

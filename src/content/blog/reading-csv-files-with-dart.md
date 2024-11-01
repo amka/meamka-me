@@ -10,8 +10,7 @@ tags:
   - tutorial
   - csv
 ogImage: ""
-description:
-  We read CSV files in Dart from synchronous mode to asynchronous Streams.
+description: We read CSV files in Dart from synchronous mode to asynchronous Streams.
 ---
 
 ## What is a CSV files
@@ -19,7 +18,8 @@ description:
 CSV is a common format for transferring tabular data between different programs. Its history goes back centuries, to a time when computers were big and trees were green. In the general case, it represents data separated by commas and collected in lines so that each line defines a specific record. However, variations occur: for example, some programs separate values ​​with tabs rather than commas, while also using the `.csv` extension, which can cause applications to crash.
 
 Let's see an example of such data:
-```
+
+```csv
 id, title, type, count
 1, "Citroen C3", Car, 2
 2, "KTM 890 ADVENTURE R", Motorcycle, 4
@@ -29,9 +29,7 @@ id, title, type, count
 
 As you can see, it looks like we have presented the table as text: each row is a file row, and the first row is a header with column names. You may also notice that double quotes sometimes surround strings, this is done in case the columns contain control characters or other characters that can break formatting, such as commas. Actually, there is an RFC describing CSV format: [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180).
 
-
 Today we will focus on how to read such files, how to do it efficiently, and even try to determine the data types inside the strings. So let's get started.
-
 
 ## Read CSV file synchronously
 
@@ -127,7 +125,6 @@ Future<List<String>?> readCsv(String path) async {
 
 Still easy enough, right? Let's move on!
 
-
 ## Async reading with Streams
 
 One of the disadvantages of our program in its current form is that it reads the entire file, after which we can work with it. Yes, despite being asynchronous, we're still loading the entire file into memory, we're just doing it asynchronously. And although this will not be a problem for small files, if our program must process files of tens and hundreds of megabytes, this can become a problem: not every computer may have enough memory.
@@ -204,17 +201,17 @@ The algorithm is ready, let's write the code!
         var ival = int.tryParse(element);
         // 3. Parsed successfully?
         if (ival != null) return ival;
-        
+
         // 4. Try to parse into double value
         var dval = double.tryParse(element);
         // 5. Parsed successfully?
         if (dval != null) return dval;
-        
+
         // 6. Check if the string is quoted
         if (element.startsWith(quotechar) && element.endsWith(quotechar)) {
             element = element.substring(1, element.length - 1);
         }
-        
+
         return element;
     });
 
