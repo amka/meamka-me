@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Andrey Maksimov",
   desc: "This is the website for Andrey Maksimov: technologist, developer and author of Frog and Norka apps.",
   title: "Andrey Maksimov",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "/assets/ai-me.webp",
   lightAndDarkMode: true,
   postPerPage: 5,
 };
