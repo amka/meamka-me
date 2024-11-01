@@ -4,7 +4,7 @@ title: "About me"
 ogImage: "/assets/ai-me.webp"
 ---
 
-My name is Andrey Maksimov and I am an author, developer at [TenderOwl](https://tenderowl.com/) and the most of the time - [24h.tv](https://eda.yandex..tv).
+My name is Andrey Maksimov and I am an author, developer at [TenderOwl](https://tenderowl.com/) and the most of the time I manage development teams at [Yandex.Eats](https://eda.yandex.tv).
 
 If you would like to get in touch, you can [email](mailto://andrey@tenderowl.com). . I can also be found on Twitter as [@meamka](https://twitter.com/meamka/).
 
